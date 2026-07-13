@@ -1,0 +1,28 @@
+[
+  {
+    "cliente": "Empresa Alpha",
+    "equipamento": "Notebook Latitude 5440",
+    "categoria": "suporte técnico",
+    "descricao": "Equipamento não liga após atualização.",
+    "status": "aberta",
+    "prioridade": "alta"
+  },
+  {
+    "id": 1783980850376,
+    "cliente": "Empresa Alpha",
+    "equipamento": "Notebook Laatitude 5440",
+    "categoria": "suporte técnico",
+    "descricao": "Equipamento não liga após atualização",
+    "status": "aberta",
+    "prioridade": "alta",
+    "criadaEm": "2026-07-13T22:14:10.376Z",
+    "historico": [
+      {
+        "dataHora": "2026-07-13T22:14:10.376Z",
+        "statusAnterior": null,
+        "statusNovo": "aberta",
+        "observacao": "Solicitação registrada no sistema."
+      }
+    ]
+  }
+]
