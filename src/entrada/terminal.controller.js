@@ -9,7 +9,7 @@ const readline = createInterface({
 function perguntar(mensagem) {
     return new Promise((resolve) => {
         readline.question(mensagem, resolve);
-});
+    });
 }
 
 export async function iniciarRegistroPeloTerminal() {
@@ -19,23 +19,23 @@ export async function iniciarRegistroPeloTerminal() {
         const categoria = await perguntar("Categoria: ");
         const descricao = await perguntar("Descrição: ");
 
-        
-    const contrato = await perguntar("Possui contrato ativo? (s/n): ");
-    const dados = {
-        cliente,
-        equipamento,
-        categoria,
-        descricao,
-        temContratoAtivo: contrato.trim().toLowerCase() === "s"
-};
 
-    const resultado = registrarSolicitacao(dados);
+        const contrato = await perguntar("Possui contrato ativo? (s/n): ");
+        const dados = {
+            cliente,
+            equipamento,
+            categoria,
+            descricao,
+            temContratoAtivo: contrato.trim().toLowerCase() === "s"
+        };
 
-    console.log(resultado.mensagem);
-    if (resultado.sucesso) {
-        console.log(resultado.dados);
+        const resultado = registrarSolicitacao(dados);
+
+        console.log(resultado.mensagem);
+        if (resultado.sucesso) {
+            console.log(resultado.dados);
+        }
+    } finally {
+        readline.close();
     }
-} finally {
-readline.close();
-}
 }
